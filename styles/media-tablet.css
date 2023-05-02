@@ -75,6 +75,10 @@
         width: 80%;
     }
 
+    .projects-container, .other-projects-container {
+        padding: 20px;
+    }
+
     .project, .project.opp {
         --translate: translate(0, -50%);
         font-size: 0.9em;
