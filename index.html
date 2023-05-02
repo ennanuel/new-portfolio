@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Poppins:wght@300;400;500;600;700&family=Urbanist:ital,wght@0,300;0,500;0,900;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/general.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+    <link rel="stylesheet" href="./styles/media-tablet.css">
+    <link rel="stylesheet" href="./styles/media-phone.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmanuel Ezema</title>
+</head>
+<body>
+    <!-- Header -->
+    <header style="top: 0; left: 0; transition: transform 0.3s ease;" id="header-lg" class="fixed z-10 w-full">
+        <nav class="flex flex-row jc-between ai-center w-full">
+            <h2 style="color: var(--white)">LOGO</h2>
+            <ul style="gap: 0;text-transform: lowercase; font-size: 0.9em" class="flex flex-row ai-center relative h-full">
+                <li class="relative flex ai-center jc-center"><a class="relative z-1" href="#">About</a></li>
+                <li class="relative flex ai-center jc-center"><a class="relative z-1" href="#">Skills</a></li>
+                <li class="relative flex ai-center jc-center"><a class="relative z-1" href="#">Projects</a></li>
+                <li class="relative flex ai-center jc-center last"><a class="relative z-1" href="#">Contact</a></li>
+                <button class="relative z-1 flex ai-center jc-center btn"><span>Résumé</span></button>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Intro section -->
+    <section class="intro section relative flex flex-row ai-center jc-start">
+        <!-- Box containing the image -->
+        <div class="image image-bg absolute">
+        </div>
+
+        <!-- Box containing my name and introductory text -->
+        <div class="intro-text w-full relative z-1">
+            <p style="color: var(--light-white); opacity: 0.5">Hi!</p>
+            <h1><span>I am</span> <span>Emmanuel</span>,</h1>
+            <p style="color: var(--light-white);"class="title">A Full-Stack Developer</p>
+            <div style="gap: 15px; margin-top: 20px;" class="w-full flex ai-center jc-start">
+                <button class="btn work-link relative"><span class="relative flex ai-center jc-center">My Works</span></button>
+                <button class="btn contact-link relative"><span class="relative flex ai-center jc-center">Contact Me</span></button>
+            </div>
+        </div>
+
+        <!-- Section social links -->
+        <article style="bottom: 0; left: 0; margin-bottom: 30px; color: var(--white); gap: 12px" class="intro-socials absolute flex ai-center">
+            <div style="height: 2px; width: 80px; background-color: var(--white); opacity: 0.3"></div>
+            <ul style="gap: 12px; font-size: 1.5em; opacity: 0.5" class="flex ai-center">
+                <li><i class="fa fa-github"></i></li>
+                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--white); opacity: 0.5"></div>
+                <li><i class="fa fa-twitter"></i></li>
+                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--white); opacity: 0.5"></div>
+                <li><i class="fa fa-linkedin"></i></li>
+                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--white); opacity: 0.5"></div>
+                <li><i class="fa fa-codepen"></i></li>
+                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--white); opacity: 0.5"></div>
+                <li><i class="fa fa-medium"></i></li>
+            </ul>
+        </article>
+
+        <div style="bottom: 15px; left: 50%; opacity: 0.6; transform: translateX(-50%); text-align: center; animation: up-down 1s infinite;" class="absolute z-1">
+            <p style="color: var(--white); font-size: 0.8em">Scroll Down</p>
+            <i style="color: var(--white)" class="fa fa-angle-double-down"></i>
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section class="about section">
+        <div class="section-title relative flex ai-center jc-start">
+            <h2 class="relative flex ai-end">
+                <span class="absolute border"></span>
+                <span class="relative z-1 number">01.</span>
+                <span class="relative z-1 section-text">About Me</span>
+                <span class="absolute border"></span>
+            </h2>
+        </div>
+        <article class="bio flex ai-start jc-center">
+            <div>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, velit quibusdam. Earum, blanditiis, hic tempore nam voluptas repellat debitis culpa sint vel quo delectus architecto repudiandae ratione neque dolor eius?
+                Fugiat labore beatae blanditiis maiores dolores, possimus quae voluptates sit ad, facere inventore, exercitationem neque iusto eaque omnis aspernatur nulla! Porro illo voluptatum architecto quaerat tempora! At ipsam optio nobis.
+                Inventore neque error illo aperiam, aliquid soluta velit pariatur repellendus. Harum veniam eum itaque perferendis reiciendis nisi inventore. Fugiat, repudiandae! Officia, rerum praesentium sit possimus quod assumenda unde quas nam.
+                </p>
+                <div style="margin-top: 15px; gap: 15px;" class="flex">
+                    <button class="btn port relative"><span class="relative w-full h-full flex ai-center jc-center">Portfolio</span></button>
+                    <button class="btn down-resume relative"><span class="relative w-full h-full flex ai-center jc-center">Résumé</span></button>
+                </div>
+            </div>
+            <div class="about-image w-full relative square"></div>
+        </article>
+    </section>
+
+    <!-- Skills section -->
+    <section class="skills section">
+        <div class="section-title relative flex ai-center jc-end">
+            <h2 class="relative flex ai-end">
+                <span class="absolute border"></span>
+                <span class="relative z-1 number">02.</span>
+                <span class="relative z-1 section-text">My Skills</span>
+                <span class="absolute border"></span>
+            </h2>
+        </div>
+        <article>
+            <p>The stack I use for most of my projects is <a href="#">MERN</a> Stack, other technologies I've used are listed below.</p>
+            <ul class="skills-list">
+                <li class="flex flex-col ai-center jc-center">
+                    <img class="skills-img" src="./assets/react.png" alt="image">
+                    <p>Frontend</p>
+                    <h3>ReactJS</h3>
+                </li class="flex flex-col ai-center jc-center">
+                <li class="flex flex-col ai-center jc-center">
+                    <img class="skills-img" src="./assets/nodejs.png" alt="image">
+                    <p>Backend</p>
+                    <h3>NodeJS</h3>
+                </li>
+                <li class="flex flex-col ai-center jc-center">
+                    <img class="skills-img" src="./assets/php.png" alt="image">
+                    <p>Backend</p>
+                    <h3>PHP</h3>
+                </li>
+                <li class="flex flex-col ai-center jc-center">
+                    <img class="skills-img" src="./assets/mongodb.png" alt="image">
+                    <p>Database</p>
+                    <h3>MongoDB</h3>
+                </li>
+                <li class="flex flex-col ai-center jc-center">
+                    <img class="skills-img" src="./assets/express-js.png" alt="image">
+                    <p>Backend</p>
+                    <h3>Express</h3>
+                </li>
+                <li class="flex flex-col ai-center jc-center">
+                    <img class="skills-img" src="./assets/firebase.png" alt="image">
+                    <p>Database</p>
+                    <h3>Firebase</h3>
+                </li>
+                <li class="flex flex-col ai-center jc-center">
+                    <img class="skills-img" src="./assets/tailwind.png" alt="image">
+                    <p>Frontend</p>
+                    <h3>TailwindCSS</h3>
+                </li>
+                <li class="flex flex-col ai-center jc-center">
+                    <img class="skills-img" src="./assets/sass.png" alt="image">
+                    <p>Frontend</p>
+                    <h3>Sass</h3>
+                </li>
+                <li class="flex flex-col ai-center jc-center">
+                    <img class="skills-img" src="./assets/mysql.png" alt="image">
+                    <p>Database</p>
+                    <h3>MySQL</h3>
+                </li>
+                <li class="flex flex-col ai-center jc-center">
+                    <img class="skills-img" src="./assets/git.png" alt="image">
+                    <p>CI/CD</p>
+                    <h3>Git</h3>
+                </li>
+            </ul>
+
+            <button class="btn relative flex ai-center jc-center"><span>more skills</span></button>
+        </article>
+    </section>
+
+    <!-- Projects section -->
+
+    <section class="projects section">
+        <div class="section-title relative flex ai-center jc-start">
+            <h2 class="relative flex ai-end">
+                <span class="absolute border"></span>
+                <span class="relative z-1 number">03.</span>
+                <span class="relative z-1 section-text">Projects</span>
+                <span class="absolute border"></span>
+            </h2>
+        </div>
+        <article>
+            <p>Below are some projects I've worked on.</p>
+            <div class="projects-container flex flex-col">
+                <!-- Projects -->
+                <div class="project relative flex ai-center jc-between">
+                    <div class="relative project-image"></div>
+                    <div class="relative project-info z-1">
+                        <div class="project-title absolute z-1"><h2 class="flex ai-center"><span>1.</span><span>Simple Project</span></h2></div>
+                        <div class="desc flex flex-col">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione corrupti a dignissimos nobis explicabo quo, odio maiores inventore eligendi natus sed illo voluptas iure? Officiis neque aliquam corporis dolore recusandae?
+                            </p>
+                            <div style="margin-top: 15px; gap: 10px;" class="flex ai-center">
+                                <button class="btn demo-link relative"><span class="relative h-full w-full flex ai-center jc-center"><i style="font-size: 1.4em; margin-right: 5px;" class="fa fa-github"></i>Demo</span></button>
+                                <button class="btn git-link relative"><span class="relative h-full w-full flex ai-center jc-center"><i style="font-size: 1.4em; margin-right: 5px;" class="fa fa-external-link"></i>Github</span></button>
+                            </div>
+                        </div>
+                        <ul class="absolute techs flex flex-wrap flex-row ai-center">
+                            <li>NodeJS</li>
+                            <li>React</li>
+                            <li>Sass</li>
+                            <li>Express</li>
+                            <li>HTML/CSS</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project opp relative flex ai-center jc-between">
+                    <div class="relative project-info z-1">
+                        <div class="project-title absolute z-1"><h2 class="flex ai-center"><span>2.</span><span>Simple Project</span></h2></div>
+                        <div class="desc flex flex-col">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione corrupti a dignissimos nobis explicabo quo, odio maiores inventore eligendi natus sed illo voluptas iure? Officiis neque aliquam corporis dolore recusandae?
+                            </p>
+                            <div style="margin-top: 15px; gap: 10px;" class="flex ai-center">
+                                <button class="btn demo-link relative"><span class="relative h-full w-full flex ai-center jc-center"><i style="font-size: 1.4em; margin-right: 5px;" class="fa fa-github"></i>Demo</span></button>
+                                <button class="btn git-link relative"><span class="relative h-full w-full flex ai-center jc-center"><i style="font-size: 1.4em; margin-right: 5px;" class="fa fa-external-link"></i>Github</span></button>
+                            </div>
+                        </div>
+                        <ul class="absolute techs flex flex-wrap flex-row ai-center">
+                            <li>NodeJS</li>
+                            <li>React</li>
+                            <li>Sass</li>
+                            <li>Express</li>
+                            <li>HTML/CSS</li>
+                        </ul>
+                    </div>
+                    <div class="relative project-image"></div>
+                </div>
+
+                <div class="project relative flex ai-center jc-between">
+                    <div class="relative project-image"></div>
+                    <div class="relative project-info z-1">
+                        <div class="project-title absolute z-1"><h2 class="flex ai-center"><span>3.</span><span>Simple Project</span></h2></div>
+                        <div class="desc flex flex-col">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione corrupti a dignissimos nobis explicabo quo, odio maiores inventore eligendi natus sed illo voluptas iure? Officiis neque aliquam corporis dolore recusandae?
+                            </p>
+                            <div style="margin-top: 15px; gap: 10px;" class="flex ai-center">
+                                <button class="btn demo-link relative"><span class="relative h-full w-full flex ai-center jc-center"><i style="font-size: 1.4em; margin-right: 5px;" class="fa fa-github"></i>Demo</span></button>
+                                <button class="btn git-link relative"><span class="relative h-full w-full flex ai-center jc-center"><i style="font-size: 1.4em; margin-right: 5px;" class="fa fa-external-link"></i>Github</span></button>
+                            </div>
+                        </div>
+                        <ul class="absolute techs flex flex-wrap flex-row ai-center">
+                            <li>NodeJS</li>
+                            <li>React</li>
+                            <li>Sass</li>
+                            <li>Express</li>
+                            <li>HTML/CSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article>
+            <p>Other noteworthy projects</p>
+            <ul class="other-projects-container">
+                <li class="other-proj relative">
+                    <div class="other-project relative">
+                        <div class="proj-line absolute"></div>
+                        <div style="top: 0; left: 0; padding: 20px; padding-left: 30px; gap: 20px; min-height: 200px;" class="relative h-full w-full flex flex-col jc-center">
+                            <div>  
+                                <h2 style="color: var(--white); font-weight: normal; font-size: 1em; margin-bottom: 10px;" class="other-project-title">
+                                    Simple Project
+                                </h2>
+                                <p class="other-project-desc">
+                                    Modi doloribus enim, eos dignissimos distinctio nobis commodi debitis. Dignissimos culpa veritatis dolores.
+                                </p>
+                            </div>
+                            <div class="other-project-top flex ai-center jc-between">
+                                <div style="gap: 10px; margin-top: 15px 0;" class="flex ai-center">
+                                    <button class="btn demo-link relative"><span class="relative h-full w-full flex ai-center jc-center"><i style="font-size: 1.4em; margin-right: 5px;" class="fa fa-github"></i>Github</span></button>
+                                    <button class="btn git-link relative"><span class="relative h-full w-full flex ai-center jc-center"><i style="font-size: 1.4em; margin-right: 5px;" class="fa fa-external-link"></i>Demo</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proj-content absolute z-1 flex flex-col ai-start jc-between">
+                            <p style="color: var(--black); font-size: 2em; font-family: 'Bruno Ace', cursive;">01.</p>
+                            <div>
+                                <h2 class="other-project-title">
+                                    Simple Project
+                                </h2>
+                                <ul style="margin: 10px 0;" class="other-project-techs flex flex-row ai-center">
+                                    <li style="--delay: 0.3s"><span>SASS</span></li>
+                                    <li style="--delay: 0.4s"><span>NodeJS</span></li>
+                                    <li style="--delay: 0.5s"><span>ReactJS</span></li>
+                                    <li style="--delay: 0.6s"><span>TypeScript</span></li>
+                                    <li style="--delay: 0.7s"><span>NextJS</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul style="top: 100%; left: 0; padding-top: 5px; color: var(--white); font-size: 0.6em; gap: 5px;" class="outside-techs absolute flex flex-row ai-center">
+                        <li style="--delay: 0.3s"><span>SASS</span></li>
+                        <li style="--delay: 0.4s"><span>NodeJS</span></li>
+                        <li style="--delay: 0.5s"><span>ReactJS</span></li>
+                        <li style="--delay: 0.6s"><span>TypeScript</span></li>
+                        <li style="--delay: 0.7s"><span>NextJS</span></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="flex jc-center ai-center">
+                <button class="btn more-btn git relative"><span class="relative h-full w-full flex ai-center jc-center">show more</i></span></button>
+            </div>
+        </article>
+    </section>
+
+    <!-- Contact Section -->
+    
+    <section class="contact section relative">
+        <article class="flex ai-center jc-center">
+            <div>
+                <div class="section-title relative flex ai-center jc-start">
+                    <h2 class="relative flex ai-end">
+                        <span class="absolute border"></span>
+                        <span class="relative z-1 number">05.</span>
+                        <span class="relative z-1 section-text">Get In Touch</span>
+                        <span class="absolute border"></span>
+                    </h2>
+                </div>
+                <p>Please do not hesitate to contact me. I'm currently looking for a job that matches my skills and goals.</p>
+            </div>
+        
+            <!-- Contact Form -->
+            <form class="form w-full relative">
+                <div class="relative z-1 flex flex-col ai-start jc-center">
+                    <input type="text" class="w-full" placeholder="name">
+                    <input type="email" class="w-full" placeholder="email">
+                    <textarea name="subject" class="w-full" id="subject" cols="30" rows="10" placeholder="topic"></textarea>
+                    <button type="button" class="btn submit w-full"><span class="relative flex ai-center jc-center">submit</span></button>
+                </div>
+            </form>
+        </article>
+    </section>
+
+    <!-- Social Links -->
+    <div class="socials fixed"></div>
+
+    <!-- Navigation -->
+    <div style="top: 50%; right: 15px; width: 20px; padding: 7px; transform: translateY(-50%)" class="navigation fixed">
+        <ul style="gap: 10px;" class="flex flex-col ai-end jc-center">
+            <li style="width: 6px; height: 50px; background-color: var(--light-white);"></li>
+            <li style="width: 6px; height: 50px; background-color: var(--yellow); border: 1px solid var(--gray)"></li>
+            <li style="width: 6px; height: 50px; background-color: var(--light-white);"></li>
+            <li style="width: 6px; height: 50px; background-color: var(--light-white);"></li>
+            <li style="width: 6px; height: 50px; background-color: var(--light-white);"></li>
+        </ul>
+    </div>
+    <script src="./script.js"></script>
+</body>
+<footer>
+    Copyright 2023, Emmanuel Ezema
+</footer>
+</html>

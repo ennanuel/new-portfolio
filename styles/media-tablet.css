@@ -1,0 +1,190 @@
+@media (max-width: 780px) {
+    html {
+        font-size: 0.9em;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    #header-lg, .navigation {
+        display: none;
+    }
+
+    .image-bg {
+        height: 60vh;
+        opacity: 0.4;
+        width: 80%;
+        max-width: 500px;
+    }
+    
+    .intro {
+        padding: 7%;
+    }
+
+    .intro-text h1 {
+        font-size: 3.5em;
+    }
+
+    .intro-text p {
+        font-size: 1.5em;
+    }
+
+    .bio {
+        flex-direction: column-reverse;
+        margin-top: 30px;
+        gap: 30px;
+        font-size: 0.8em;
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .about-image:after, .about-image:before {
+        border-width: 5px;
+    }
+
+    .skills article {
+        padding: 10px;
+    }
+
+    .skills-list {
+        margin-top: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .skills-list li {
+        font-size: 0.9em;
+        padding: 10px;
+        padding-bottom: 5px;
+    }
+
+    .skills-img {
+        width: 80%;
+    }
+
+    .project, .project.opp {
+        --translate: translate(0, -50%);
+        font-size: 0.9em;
+    }
+
+    .project-image {
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .project-image:before, .project-image:after {
+        border-width: 5px;
+    }
+
+    .project-image:before {
+        top: -5px;
+        left: -5px;
+    }
+
+    .project-title {
+        top: 0;
+        transform: var(--translate);
+        background-color: var(--black);
+        margin: 0 20px;
+    }
+    
+    .project:not(.opp) .project-title {
+        right: 0
+    }
+    
+    .project.opp .project-title {
+        left: 0;
+    }
+    
+    .project-title h2 {
+        border: 3px solid var(--black);
+        transform: translate(-10px, -10px);
+        background-color: var(--black);
+    }
+
+    .project-info {
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-color: var(--desc-bg);
+        backdrop-filter: blur(10px);
+    }
+
+    .desc {
+        background-color: transparent;
+        backdrop-filter: blur(0);
+        padding: 20px 20px 10px;;
+    }
+
+    .desc p {
+        margin-top: 20px;
+    }
+
+    .techs {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0px 20px 20px;
+    }
+
+    .techs li {
+        backdrop-filter: blur(0);
+    }
+
+    .other-projects-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0px;
+        padding: 0;
+        margin: 20px 0 50px;
+    }
+
+    .contact {
+        font-size: 0.9em;
+    }
+
+    .contact article {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .contact p {
+        margin: 30px 10px 0; 
+    }
+
+    .form {
+        max-width: 100%;
+        top: 10px;
+    }
+
+    .form div {
+        gap: 10px;
+    }
+
+    .form:before {
+        top: -10px;
+        left: -10px;
+    }
+
+    .form:before, .form:after {
+        border-width: 5px;
+    }
+
+    .form input, .form textarea {
+        padding: 7px 12px;
+    }
+
+    .form:hover {
+        transform: translate(0, 0);
+    }
+    
+    .form:hover::before {
+        transform: translate(0, 0);
+    }
+}

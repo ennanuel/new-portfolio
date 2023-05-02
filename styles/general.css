@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --white: #fdebf4;
+    --light-white: #9b9397;
+    --light-black: #0c0c0c59;
+    --light-purple: #872ac969;
+    --light-yellow: #e8c15a69;
+    --solid-light-purple: #be95db;
+    --purple: #872ac9;
+    --dark-purple: #41195d;
+    --gray: #19171b;
+    --black: #0c0c0c;
+    --yellow: #e8c15a;
+}
+
+html, body {
+    max-width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Urbanist', sans-serif; */
+}
+
+html {
+    background-color: var(--white);
+    color: var(--purple);
+}
+
+section {
+    min-height: 100vh;
+}
+
+.section {
+    padding: 7%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+p {
+    color: var(--dark-purple)
+}
+
+a {
+    color: var(--yellow);
+    text-decoration: none;
+    font-family: 'Bruno Ace', cursive;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--purple)
+}
+
+button {
+    font-family: inherit;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.square {
+    aspect-ratio: 1;
+}
+
+.relative {
+    position: relative
+}
+
+.absolute {
+    position: absolute
+}
+
+.sticky {
+    position: sticky
+}
+
+.z-0 {
+    z-index: 0
+}
+
+.z-1 {
+    z-index: 1
+}
+
+.z-10 {
+    z-index: 10
+}
+
+.z-100 {
+    z-index: 100;
+}
+
+.fixed {
+    position: fixed
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-start {
+    justify-content: flex-start;
+}
+
+.jc-end {
+    justify-content: flex-end;
+}
+
+.jc-between {
+    justify-content: space-between;
+}
+
+.jc-around {
+    justify-content: space-around;
+}
+
+.jc-evenly {
+    justify-content: space-evenly;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.ai-start {
+    align-items: flex-start;
+}
+
+.ai-end {
+    align-items: flex-end;
+}
+
+.ai-between {
+    align-items: space-between;
+}
+
+.ai-around {
+    align-items: space-around;
+}
+
+.ai-evenly {
+    align-items: space-evenly;
+}
+
+.primary {
+    color: var(--white);
+}
+
+.secondary {
+    color: var(--gray);
+}
+
+.section-title {
+    overflow: hidden;
+}
+
+.section-title h2 {
+    gap: 10px;
+    padding: 5px 30px;
+    width: fit-content;
+}
+
+.section-title .section-text { 
+    color: var(--txt-color);
+    font-size: 2em;
+}
+
+.section-title .number {
+    font-family: 'Bruno Ace', cursive;
+    color: var(--num-color);
+    margin-bottom: 15px;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.section-title .border {
+    width: 100px;
+    height: 40%;
+}
+
+.section-title .border:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background-color: var(--title-border);
+    transition: transform 0.3s ease;
+    transform: scaleY(0.1);
+    transform-origin: top;
+}
+
+.section-title .border:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: var(--title-border);
+    transition: transform 0.3s ease;
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.section-title .border:first-child {
+    top: 0;
+    left: 0;
+}
+
+.section-title .border:last-child {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+section:hover .section-title .border:before {
+    transform: scaleY(1)
+}
+
+section:hover .section-title .border:after {
+    transform: scaleX(0.8)
+}
+
+.btn {
+    border: none;
+    font-weight: bold;
+    background-color: var(--shadow);
+}
+
+.btn:hover span {
+    transform: translate(5px, -5px)
+}
+
+.btn span {
+    padding: 10px 35px;
+    transition: transform 0.2s ease;
+    color: var(--txt);
+    background-color: var(--bg);
+    border: 5px solid var(--border);
+}

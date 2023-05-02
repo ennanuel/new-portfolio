@@ -1,0 +1,69 @@
+@media (max-width: 480px) {
+    .section-title {
+        justify-content: center;
+    }
+    
+    .section {
+        padding: 80px 10px;
+    }
+        
+    .section-title h2 {
+        gap: 10px;
+        padding: 5px 20px;
+    }
+
+    .section-title .section-text { 
+        font-size: 1.5em;
+    }
+
+    .section-title .number {
+        margin-bottom: 10px;
+        font-size: 0.8em;
+    }
+
+    .section-title .border {
+        width: 100px;
+    }
+
+    .section-title .border:before {
+        width: 5px;
+        transform: scaleY(1);
+    }
+
+    .section-title .border:after {
+        height: 5px;
+        transform: scaleX(0.8);
+    }
+    
+    .intro {
+        padding: 10px;
+    }
+
+    .intro-blur {
+        opacity: 0;
+    }
+
+    .image-bg {
+        left: -5%;
+    }
+
+    .intro-text h1 {
+        font-size: 3em;
+    }
+
+    .intro-text p {
+        font-size: 1.2em;
+    }
+
+    .btn span {
+        font-size: 0.9em;
+        padding: 8px 15px;
+        border-width: 3px;
+    }
+
+    .skills p {
+        text-align: left;
+        font-size: 0.9em;
+        margin-top: 20px;
+    }
+}

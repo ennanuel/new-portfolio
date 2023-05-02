@@ -1,0 +1,642 @@
+/* Header Design */
+
+header nav {
+    padding: 0 5%;
+    background-color: var(--);
+    height: 60px;
+    overflow: hidden;
+    background: var(--gray);
+}
+
+header nav ul li {
+    --color: var(--light-white);
+    height: 100%;
+}
+
+header nav ul li a {
+    margin: 0 20px;
+    color: var(--color);
+    --size: 0;
+}
+
+header nav ul li a:hover {
+    --size: 1;
+}
+
+header nav ul li a:before {
+    content: "";
+    position: absolute;
+    top: calc(100% + 3px);
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--color);
+    transform-origin: left;
+    transform: scaleX(var(--size));
+    transition: transform 0.3s ease;
+}
+
+header nav ul .btn {
+    font-size: 0.8em;
+    margin: 0;
+    --txt: var(--yellow);
+    --bg: var(--gray);
+    --shadow: var(--yellow);
+    --border: var(--yellow);
+}
+
+header nav ul .btn span {
+    border-width: 3px;
+    padding: 5px 15px;
+}
+
+/* Intro section design */
+
+.intro {
+    background-color: var(--gray);
+    overflow: hidden;
+    padding: 10%;
+}
+
+.intro-text h1 {
+    text-transform: lowercase;
+    color: var(--white);
+    font-weight: normal;
+    font-size: 5em;
+}
+
+.intro-text h1 span:last-child {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.intro-text p {
+    font-size: 1.7em;
+}
+
+.image-bg {
+    bottom: 0;
+    left: 6%;
+    width: 60%;
+    height: 80vh;
+    opacity: 0.7;
+}
+
+.image-bg:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-purple);
+    border: 5px solid var(--black);
+    border-radius: 20px 20px 0 0;
+}
+
+.image-bg:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--yellow);
+    border: 5px solid var(--black);
+    border-radius: 20px 20px 0 0;
+}
+
+.intro .btn {
+    text-transform: lowercase;
+}
+
+.intro .btn.contact-link {
+    --bg: var(--purple);
+    --txt: var(--gray);
+    --border: var(--gray);
+    --shadow: var(--gray);
+}
+
+.intro .btn.work-link {
+    --bg: var(--yellow);
+    --txt: var(--gray);
+    --border: var(--gray);
+    --shadow: var(--gray);
+}
+
+/* About section design */
+
+.about {
+    padding: 7%;
+    --title-border: var(--purple);
+    --cut: var(--white);
+    --num-color: var(--purple);
+    --txt-color: var(--gray);
+}
+
+.bio {
+    gap: 50px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: var(--white);
+    border: 10px solid var(--dark-purple);
+}
+
+.about-image:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    border: 10px solid var(--yellow);
+}
+
+.bio .port {
+    --txt: var(--black);
+    --bg: var(--purple);
+    --shadow: var(--gray);
+    --border: var(--gray)
+}
+
+.bio .down-resume {
+    --txt: var(--black);
+    --bg: var(--yellow);
+    --shadow: var(--black);
+    --border: var(--black)
+}
+
+/* Skills styling */
+
+.skills {
+    --title-border: var(--yellow);
+    --num-color: var(--yellow);
+    --txt-color: var(--white);
+    background-color: var(--gray);
+    color: var(--light-white);
+}
+
+.skills article {
+    padding: 4% 8%;
+}
+
+.skills p {
+    color: inherit;
+    text-align: right;
+}
+
+.skills-img {
+    filter: saturate(0.1);
+    object-fit: contain;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.skills-list li:hover .skills-img {
+    filter: saturate(1);
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 2vmax;
+    margin-top: 50px;
+}
+
+.skills-list li {
+    text-align: left;
+    padding: 15px 15px 10px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.skills-list li:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--purple);
+    border-radius: 5px;
+    background: repeating-linear-gradient(-45deg, var(--purple) 0, var(--purple) 2px, transparent 3px, transparent 12px);
+    background-size: 200px;
+    background-position: 0 0;
+    transform: translate(0, 0);
+    transition: transform 0.3s ease;
+}
+
+.skills-list li:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--yellow);
+    border-radius: 5px;
+    background-color: var(--gray);
+}
+
+.skills-list li:hover:before {
+    transform: translate(-10px, 10px);
+}
+
+.skills-list li:hover {
+    transform: translate(10px, -10px);
+}
+
+.skills-list li h3 {
+    color: var(--white);
+    font-size: 0.9em;
+    font-weight: normal;
+    align-self: flex-start;
+    position: relative;
+    z-index: 1;
+}
+
+.skills-list li p {
+    font-size: 0.7em;
+    font-weight: bold;
+    color: var(--light-yellow);
+    align-self: flex-start;
+    text-transform: lowercase;
+    margin-top: 10%;
+    position: relative;
+    z-index: 1;
+}
+
+.skills-list li:hover {
+    z-index: 1;
+    background: var(--light-black)
+}
+
+.skills .btn {
+    --txt: var(--light-white);
+    --bg: var(--gray);
+    --shadow: var(--light-white);
+    --border: var(--light-white);
+    margin: 50px auto 0;
+}
+
+.skills .btn span {
+    border-width: 5px;
+}
+
+/* projects styling */
+
+.projects {
+    --title-border: var(--purple);
+    --num-color: var(--purple);
+    --txt-color: var(--gray);
+    padding: 7%;
+    background-color: var(--white);
+}
+.projects-container {
+    margin: 50px 0;
+    gap: 80px;
+}
+
+.project-image {
+    min-width: 40%;
+    aspect-ratio: 1;
+}
+
+.project {
+    --left: -10%;
+    --translate: translate(50%, -50%);
+    --before-border: var(--yellow);
+    --after-border: var(--dark-purple);
+    --desc-bg: var(--light-purple);
+}
+
+.project.opp {
+    --left: 10%;
+    --translate: translate(-50%, -50%);
+    --before-border: var(--dark-purple);
+    --after-border: var(--yellow);
+    --desc-bg: var(--light-yellow);
+}
+
+.project-info {
+    width: 70%;
+    left: var(--left);
+}
+
+.desc {
+    background-color: var(--desc-bg);
+    backdrop-filter: blur(10px);
+    padding: 40px 60px;
+}
+
+.project-image:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    border: 10px solid var(--before-border);
+}
+
+.project-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    border: 10px solid var(--after-border);
+}
+
+.projects .btn.demo-link {
+    --txt: var(--black);
+    --bg: var(--yellow);
+    --shadow: var(--black);
+    --border: var(--black);
+}
+
+.projects .btn.git-link {
+    --txt: var(--gray);
+    --bg: var(--purple);
+    --shadow: var(--gray);
+    --border: var(--gray);
+}
+
+.project-title {
+    top: 0;
+    transform: var(--translate);
+    background-color: var(--black);
+}
+
+.project:not(.opp) .project-title {
+    right: 0
+}
+
+.project.opp .project-title {
+    left: 0;
+}
+
+.project-title h2 {
+    border: 5px solid var(--black);
+    transform: translate(-10px, -10px);
+    background-color: var(--black);
+}
+
+.project-title span:first-child {
+    color: var(--white);
+    font-size: 0.7em;
+    padding: 0 15px 0 10px;
+}
+
+.project-title span:last-child {
+    color: var(--black);
+    background-color: var(--white);
+    padding: 3px 10px;
+}
+
+.techs {
+    gap: 5px;
+    margin-top: 5px;
+    top: 100%;
+    left: 0;
+    font-family: "Bruno Ace", cursive;
+}
+
+.techs li {
+    padding: 2px 7px;
+    background-color: var(--desc-bg);
+    backdrop-filter: blur(10px);
+    color: var(--black);
+    font-size: 0.7em;
+    text-transform: lowercase;
+}
+
+.other-projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding: 5%;
+}
+
+.other-project {
+    overflow: hidden;
+    border: 3px solid var(--gray);
+    border-radius: 5px;
+    background-color: var(--gray);
+}
+
+.proj-line {
+    height: calc(100%);
+    width: 15px;
+    top: 0;
+    left: 0;
+    background-color: var(--solid-light-purple);
+    transition: transform 0.3s ease;
+    transform: scaleY(0.2);
+    border: 5px solid var(--gray);
+    border-radius: 20px;
+}
+
+.other-proj:hover .proj-line {
+    transform: scaleY(1);
+}
+
+.other-proj:hover .proj-content, .other-proj:focus .proj-content {
+    transform: translate(101%, 0px);
+}
+
+.other-project .proj-content {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--solid-light-purple);
+    border-radius: 3px;
+    padding: 20px 20px 10px;
+    font-size: 0.9em;
+    transition: transform 0.3s ease;
+}
+
+.outside-techs li {
+    overflow: hidden;
+}
+
+.outside-techs li span {
+    display: block;
+    background-color: var(--black);
+    padding: 3px 5px;
+    border-radius: 2px;
+    text-transform: lowercase;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.other-project-techs {
+    gap: 10px;
+    font-size: 0.7em;
+}
+
+.other-project-techs li {
+    overflow: hidden;
+}
+
+.other-project-techs li span {
+    display: block;
+    color: var(--gray);
+    text-transform: lowercase;
+    transform: translateX(0%);
+    transition: transform 0.3s ease;
+    transition-delay: var(--delay);
+}
+
+.other-proj:hover .other-project-techs li span {
+    transition: none;
+    transform: translateX(-100%);
+}
+
+.other-proj:hover .outside-techs li span {
+    transform: translateY(0);
+    transition-delay: var(--delay);
+}
+
+.other-project .btn span {
+    border-width: 3px;
+}
+.other-project .other-project-title {
+    color: var(--black);
+    font-family: "Bruno Ace", cursive;
+}
+
+.other-project-desc {
+    color: var(--white);
+    opacity: 0.6;
+    font-size: 0.8em;
+}
+
+.other-project .btn.git-link {
+    --txt: var(--purple);
+    --bg: var(--gray);
+    --border: var(--purple);
+    --shadow: var(--purple);
+}
+
+.other-project .btn.demo-link {
+    --txt: var(--yellow);
+    --bg: var(--gray);
+    --border: var(--yellow);
+    --shadow: var(--yellow);
+}
+
+.projects .btn.more-btn {
+    --txt: var(--gray);
+    --bg: var(--white);
+    --border: var(--gray);
+    --shadow: var(--gray);
+    margin: auto;
+}
+
+/* Contact design */
+
+.contact {
+    --title-border: var(--yellow);
+    --num-color: var(--yellow);
+    --txt-color: var(--white);
+    padding: 7%;
+    background-color: var(--gray);
+}
+
+.contact article {
+    gap: 30px;
+}
+
+.contact p {
+    max-width: 500px;
+    margin: 40px 0 0 40px;
+    color: var(--light-white);
+}
+
+.form {
+    max-width: 500px;
+    top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.form div {
+    padding: 20px; 
+    gap: 20px;
+}
+
+.form:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--purple);
+    border: 5px solid var(--black);
+    transition: transform 0.3s ease;
+}
+
+.form:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--yellow);
+    border: 5px solid var(--black);
+}
+
+.form:hover {
+    transform: translate(10px, 10px);
+}
+
+.form:hover::before {
+    transform: translate(-10px, -10px);
+}
+
+.form input, .form textarea {
+    padding: 10px 20px;
+    background-color: var(--white);
+    color: var(--dark-purple);
+    border: 2px solid var(--black);
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.form *::placeholder {
+    color: inherit;
+}
+
+.contact .form .btn.submit {
+    --txt: var(--black);
+    --bg: var(--purple);
+    --border: var(--black);
+    --shadow: var(--black);
+}
+
+footer {
+    background-color: var(--black); 
+    color: var(--white); 
+    font-size: 0.9em; 
+    text-align: center; 
+    padding: 20px;
+}
