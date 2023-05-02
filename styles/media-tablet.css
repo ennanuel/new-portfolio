@@ -32,18 +32,28 @@
 
     .bio {
         flex-direction: column-reverse;
-        margin-top: 30px;
+        margin-top: 50px;
         gap: 30px;
         font-size: 0.8em;
     }
 
+    .bio div:first-child {
+        width: 100%;
+        padding: 20px;
+    }
+
     .about-image {
-        max-width: 100%;
+        width: 200px;
         margin: auto;
     }
 
     .about-image:after, .about-image:before {
         border-width: 5px;
+    }
+
+    .about-image:before {
+        top: -10px;
+        left: -10px;
     }
 
     .skills article {
@@ -68,6 +78,10 @@
     .project, .project.opp {
         --translate: translate(0, -50%);
         font-size: 0.9em;
+    }
+
+    .projects-text {
+        font-size: 1.2em;
     }
 
     .project-image {

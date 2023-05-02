@@ -136,10 +136,15 @@ header nav ul .btn span {
 
 .bio {
     gap: 50px;
+    margin: 50px auto 0;
+}
+
+.bio div:first-child {
+    width: 50%;
 }
 
 .about-image {
-    flex: 1;
+    width: 30%;
 }
 
 .about-image:after {
@@ -149,19 +154,21 @@ header nav ul .btn span {
     left: 0px;
     height: 100%;
     width: 100%;
-    background: var(--white);
+    background: var(--solid-light-purple);
     border: 10px solid var(--dark-purple);
+    border-radius: 10px;
 }
 
 .about-image:before {
     content: "";
     position: absolute;
-    top: -10px;
-    left: -10px;
+    top: -15px;
+    left: -15px;
     width: 100%;
     height: 100%;
-    background: var(--white);
+    background: var(--light-yellow);
     border: 10px solid var(--yellow);
+    border-radius: 10px;
 }
 
 .bio .port {
@@ -199,6 +206,7 @@ header nav ul .btn span {
 
 .skills-img {
     filter: saturate(0.1);
+    max-width: 100px;
     object-fit: contain;
     width: 100%;
     position: relative;
@@ -305,6 +313,14 @@ header nav ul .btn span {
     padding: 7%;
     background-color: var(--white);
 }
+
+.projects-text {
+    font-size: 2em;
+    text-align: center;
+    color: var(--purple);
+    margin-top: 50px;
+}
+
 .projects-container {
     margin: 50px 0;
     gap: 80px;
