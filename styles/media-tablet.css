@@ -105,9 +105,13 @@
         border-width: 5px;
     }
 
+    .desc {
+        backdrop-filter: blur(0);
+    }
+
     .project-image:before {
-        top: -5px;
-        left: -5px;
+        top: -8px;
+        left: -8px;
     }
 
     .project-title {
