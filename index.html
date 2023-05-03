@@ -21,24 +21,45 @@
         <nav class="flex flex-row jc-between ai-center w-full">
             <h2 style="color: var(--white)">LOGO</h2>
             <ul style="gap: 0;text-transform: lowercase; font-size: 0.9em" class="flex flex-row ai-center relative h-full">
-                <li class="relative flex ai-center jc-center"><a class="relative z-1" href="#">About</a></li>
-                <li class="relative flex ai-center jc-center"><a class="relative z-1" href="#">Skills</a></li>
-                <li class="relative flex ai-center jc-center"><a class="relative z-1" href="#">Projects</a></li>
-                <li class="relative flex ai-center jc-center last"><a class="relative z-1" href="#">Contact</a></li>
+                <li class="relative flex ai-center jc-center"><a class="relative z-1" href="#about">About</a></li>
+                <li class="relative flex ai-center jc-center"><a class="relative z-1" href="#skills">Skills</a></li>
+                <li class="relative flex ai-center jc-center"><a class="relative z-1" href="#projects">Projects</a></li>
+                <li class="relative flex ai-center jc-center last"><a class="relative z-1" href="#contact">Contact</a></li>
                 <button class="relative z-1 flex ai-center jc-center btn"><span>Résumé</span></button>
             </ul>
         </nav>
     </header>
 
+    <!-- Header -->
+    <header style="top: 0; left: 0; transition: transform 0.3s ease;" id="header-sm" class="fixed z-10 w-full">
+        <nav class="">
+            <div class="header-top flex flex-row ai-center jc-between">
+                <h2 class="relative z-1" style="color: var(--white)">LOGO</h2>
+                <button class="menu-btn relative z-1">
+                    <span class="w-full absolute"></span>
+                    <span class="w-full absolute"></span>
+                    <span class="w-full absolute"></span>
+                </button>
+            </div>
+            <ul class="header-bottom absolute flex flex-col ai-start jc-center">
+                <li style="--delay: 0.4s" class="relative flex ai-center jc-center"><a class="relative z-1" href="#about">About</a></li>
+                <li style="--delay: 0.45s" class="relative flex ai-center jc-center"><a class="relative z-1" href="#skills">Skills</a></li>
+                <li style="--delay: 0.5s" class="relative flex ai-center jc-center"><a class="relative z-1" href="#projects">Projects</a></li>
+                <li style="--delay: 0.55s" class="relative flex ai-center jc-center last"><a class="relative z-1" href="#contact">Contact</a></li>
+                <button style="--delay: 0.6s" class="relative z-1 flex ai-center jc-center btn"><span>Résumé</span></button>
+            </ul>
+        </nav>
+    </header>
+
     <!-- Intro section -->
-    <section class="intro section relative flex flex-row ai-center jc-start">
+    <section class="intro section relative flex flex-row ai-center jc-start"
         <!-- Box containing the image -->
-        <div class="image image-bg absolute">
+        <div class="image image-bg fixed z-0">
         </div>
 
         <!-- Box containing my name and introductory text -->
         <div class="intro-text w-full relative z-1">
-            <p style="color: var(--light-white); opacity: 0.5">Hi!</p>
+            <p style="color: var(--light-white);">Hi!</p>
             <h1><span>I am</span> <span>Emmanuel</span>,</h1>
             <p style="color: var(--light-white);"class="title">A Full-Stack Developer</p>
             <div style="gap: 15px; margin-top: 20px;" class="w-full flex ai-center jc-start">
@@ -48,17 +69,17 @@
         </div>
 
         <!-- Section social links -->
-        <article style="bottom: 0; left: 0; margin-bottom: 30px; color: var(--white); gap: 12px" class="intro-socials absolute flex ai-center">
-            <div style="height: 2px; width: 80px; background-color: var(--white); opacity: 0.3"></div>
+        <article style="bottom: 0; left: 0; margin-bottom: 30px; color: var(--light-white); gap: 12px" class="intro-socials absolute flex ai-center">
+            <div style="height: 2px; width: 80px; background-color: var(--light-white);"></div>
             <ul style="gap: 12px; font-size: 1.5em; opacity: 0.5" class="flex ai-center">
                 <li><i class="fa fa-github"></i></li>
-                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--white); opacity: 0.5"></div>
+                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--light-white);"></div>
                 <li><i class="fa fa-twitter"></i></li>
-                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--white); opacity: 0.5"></div>
+                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--light-white);"></div>
                 <li><i class="fa fa-linkedin"></i></li>
-                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--white); opacity: 0.5"></div>
+                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--light-white);"></div>
                 <li><i class="fa fa-codepen"></i></li>
-                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--white); opacity: 0.5"></div>
+                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--light-white);"></div>
                 <li><i class="fa fa-medium"></i></li>
             </ul>
         </article>
@@ -70,7 +91,7 @@
     </section>
 
     <!-- About section -->
-    <section class="about section">
+    <section class="about section relative z-1" id="skills">
         <div class="section-title relative flex ai-center jc-start">
             <h2 class="relative flex ai-end">
                 <span class="absolute border"></span>
@@ -96,7 +117,7 @@
     </section>
 
     <!-- Skills section -->
-    <section class="skills section">
+    <section class="skills section relative z-1" id="about">
         <div class="section-title relative flex ai-center jc-end">
             <h2 class="relative flex ai-end">
                 <span class="absolute border"></span>
@@ -166,7 +187,7 @@
 
     <!-- Projects section -->
 
-    <section class="projects section">
+    <section class="projects section relative z-1" id="projects">
         <div class="section-title relative flex ai-center jc-start">
             <h2 class="relative flex ai-end">
                 <span class="absolute border"></span>
@@ -304,7 +325,7 @@
 
     <!-- Contact Section -->
     
-    <section class="contact section relative">
+    <section class="contact section relative z-1" id="contact">
         <article class="flex ai-center jc-center">
             <div>
                 <div class="section-title relative flex ai-center jc-start">
@@ -334,7 +355,7 @@
     <div class="socials fixed"></div>
 
     <!-- Navigation -->
-    <div style="top: 50%; right: 15px; width: 20px; padding: 7px; transform: translateY(-50%)" class="navigation fixed">
+    <div style="top: 50%; right: 15px; width: 20px; padding: 7px; transform: translateY(-50%)" class="navigation fixed z-10">
         <ul style="gap: 10px;" class="flex flex-col ai-end jc-center">
             <li style="width: 6px; height: 50px; background-color: var(--light-white);"></li>
             <li style="width: 6px; height: 50px; background-color: var(--yellow); border: 1px solid var(--gray)"></li>
@@ -345,7 +366,7 @@
     </div>
     <script src="./script.js"></script>
 </body>
-<footer>
+<footer class="footer relative z-1">
     Copyright 2023, Emmanuel Ezema
 </footer>
 </html>

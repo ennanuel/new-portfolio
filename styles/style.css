@@ -1,6 +1,6 @@
 /* Header Design */
 
-header nav {
+#header-lg nav {
     padding: 0 5%;
     background-color: var(--);
     height: 60px;
@@ -8,22 +8,22 @@ header nav {
     background: var(--gray);
 }
 
-header nav ul li {
+#header-lg nav ul li {
     --color: var(--light-white);
     height: 100%;
 }
 
-header nav ul li a {
+#header-lg nav ul li a {
     margin: 0 20px;
     color: var(--color);
     --size: 0;
 }
 
-header nav ul li a:hover {
+#header-lg nav ul li a:hover {
     --size: 1;
 }
 
-header nav ul li a:before {
+#header-lg nav ul li a:before {
     content: "";
     position: absolute;
     top: calc(100% + 3px);
@@ -36,7 +36,7 @@ header nav ul li a:before {
     transition: transform 0.3s ease;
 }
 
-header nav ul .btn {
+#header-lg nav ul .btn {
     font-size: 0.8em;
     margin: 0;
     --txt: var(--yellow);
@@ -45,9 +45,134 @@ header nav ul .btn {
     --border: var(--yellow);
 }
 
-header nav ul .btn span {
+#header-lg nav ul .btn span {
     border-width: 3px;
     padding: 5px 15px;
+}
+
+#header-sm {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.header-top {
+    padding: 10px 20px;
+    background-color: var(--gray);
+}
+
+.menu-btn {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: transform 0.3s ease;
+    transition-delay: 0.2s;
+}
+
+.menu-btn span {
+    display: block;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--light-white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease;
+}
+
+.menu-btn span:nth-child(1) {
+    transform: translate(-50%, calc(-50% - 10px));
+    transition-delay: 0.2s;
+}
+
+.show-menu .menu-btn span:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.menu-btn span:nth-child(3) {
+    transform: translate(-50%, calc(-50% + 10px));
+    transition-delay: 0.2s;
+}
+
+.show-menu .menu-btn {
+    transform: rotate(135deg);
+}
+
+.show-menu .menu-btn span {
+    background-color: var(--solid-light-purple);
+}
+
+.show-menu .menu-btn span:nth-child(1) {
+    transform: translate(-50%, -50%);
+    transition-delay: 0s;
+}
+
+.show-menu .menu-btn span:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.show-menu .menu-btn span:nth-child(3) {
+    transform: translate(-50%, -50%);
+    transition-delay: 0s;
+}
+
+.header-bottom {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-purple);
+    color: var(--white);
+    padding: 30px;
+    text-transform: lowercase;
+    font-size: 2.5em;
+    gap: 20px;
+    clip-path: circle(0 at calc(100% - 50px) 30px);
+    transition: clip-path 0.5s ease;
+}
+
+.header-bottom li a {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+    transition-delay: var(--delay);
+}
+
+.header-bottom li {
+    overflow: hidden;
+}
+
+.show-menu li a {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.header-bottom button {
+    transform: translateX(50px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+    transition-delay: var(--delay);
+}
+
+.show-menu button {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.show-menu .header-bottom {
+    clip-path: circle(150% at calc(100% - 30px) 30px);
+}
+
+.header-bottom a {
+    color: var(--solid-light-purple)
+}
+
+.header-bottom .btn {
+    --txt: var(--yellow);
+    --bg: var(--dark-purple);
+    --shadow: var(--yellow);
+    --border: var(--yellow);
 }
 
 /* Intro section design */
@@ -128,6 +253,7 @@ header nav ul .btn span {
 
 .about {
     padding: 7%;
+    background-color: var(--white);
     --title-border: var(--purple);
     --cut: var(--white);
     --num-color: var(--purple);

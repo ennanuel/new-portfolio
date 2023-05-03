@@ -11,6 +11,11 @@
         display: none;
     }
 
+    #header-sm {
+        opacity: 1;
+        pointer-events: all;
+    }
+
     .image-bg {
         height: 60vh;
         opacity: 0.4;
