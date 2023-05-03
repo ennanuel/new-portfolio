@@ -1,5 +1,13 @@
 /* Header Design */
 
+.scrolled#header-lg {
+    transform: translateY(-100%);
+}
+
+#header-lg:hover {
+    transform: translateY(0);
+}
+
 #header-lg nav {
     padding: 0 5%;
     background-color: var(--);
@@ -13,7 +21,11 @@
     height: 100%;
 }
 
-#header-lg .active-nav {
+#header-lg .nav-link a:hover {
+    --color: var(--white);
+}
+
+#header-lg .active-nav a {
     --color: var(--yellow)
 }
 
@@ -42,7 +54,7 @@
 
 #header-lg .btn {
     font-size: 0.8em;
-    margin: 0;
+    margin-left: 20px;
     --txt: var(--yellow);
     --bg: var(--gray);
     --shadow: var(--yellow);
@@ -59,9 +71,18 @@
     pointer-events: none;
 }
 
+.scrolled .header-top {
+    transform: translateY(-100%)
+}
+
+.show-menu .header-top {
+    transform: translateY(0);
+}
+
 .header-top {
     padding: 10px 20px;
     background-color: var(--gray);
+    transition: transform 0.3s ease;
 }
 
 .menu-btn {
@@ -127,8 +148,6 @@
     top: 0;
     left: 0;
     background-color: var(--dark-purple);
-    color: var(--white);
-    padding: 30px;
     text-transform: lowercase;
     font-size: 2.5em;
     gap: 20px;
@@ -136,33 +155,41 @@
     transition: clip-path 0.5s ease;
 }
 
+.header-bottom li {
+    padding: 0 30px;
+}
+
 .header-bottom .nav-link a {
     transform: translateY(20px);
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.2s ease;
+    color: inherit;
 }
 
 .header-bottom .nav-link {
     overflow: hidden;
+    transition: transform 0.2s ease;
+    color: var(--solid-light-purple)
 }
 
-.nav-link::before {
+.nav-link a::before {
     content: "";
     position: absolute;
+    left: -15px;
     top: 0;
-    left: 0;
     width: 5px;
     height: 100%;
     background-color: var(--yellow);
     border-radius: 4px;
-    opacity: 0;
+    transform: scaleX(0);
+    transition: transform 0.1s ease;
 }
 
-.header-bottom .nav-link:hover::before, .header-bottom .active-nav::before {
-    opacity: 1;
+.header-bottom .active-nav a::before {
+    transform: scaleX(1);
 }
 
-.header-bottom .nav-link:hover, .header-bottom .active-nav {
+.header-bottom .active-nav {
     transform: translateX(15px);
     color: var(--yellow);
 }
@@ -173,13 +200,13 @@
     transition-delay: var(--delay);
 }
 
-.header-bottom button {
+.header-bottom .btn {
     transform: translateX(50px);
     transition: transform 0.3s ease, opacity 0.2s ease;
     opacity: 0;
 }
 
-.show-menu button {
+.show-menu .btn {
     transform: translateY(0);
     transition-delay: var(--delay);
     opacity: 1;
@@ -187,10 +214,6 @@
 
 .show-menu .header-bottom {
     clip-path: circle(150% at calc(100% - 30px) 30px);
-}
-
-.header-bottom a {
-    color: var(--solid-light-purple)
 }
 
 .header-bottom .btn {

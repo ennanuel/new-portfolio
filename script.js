@@ -1,16 +1,25 @@
+const headers = document.getElementsByTagName('header')
+const headerSm = document.getElementById('header-sm')
 const headerLg = document.getElementById('header-lg')
 const navigation = document.querySelector('.navigation')
-const headerSm = document.getElementById('header-sm')
 const menuBtn = document.querySelector('.menu-btn')
-const navLinks = document.getElementsByClassName('nav-link')
 const navigationLinks = document.getElementsByClassName('navigation-link')
 
 let scrollY = 0;
 
 const handleScroll = () => {
-    headerLg.style.transform = window.scrollY > scrollY ? "translateY(-100%)" : "translateY(0)"
-    navigation.style.transform = window.scrollY > scrollY || window.scrollY === 0 ? "translate(0, -50%)" : "translate(150px, -50%)"
-    navigation.style.opacity = window.scrollY > scrollY || window.scrollY === 0 ? "1" : "0"
+    if(window.scrollY > scrollY) {
+        [...headers].forEach( header => header.classList.add('scrolled') )
+    } else {
+        [...headers].forEach( header => header.classList.remove('scrolled') );
+    }
+    
+    if(window.scrollY > scrollY || window.scrollY === 0) {
+        navigation.classList.add('show-navigate')
+    } else {
+        navigation.classList.remove('hide-navigate')
+    }
+
     scrollY = window.scrollY
 }
 
@@ -18,20 +27,21 @@ const handleClick = () => {
     headerSm.classList.toggle('show-menu')
 }
 
-menuBtn.addEventListener('click', handleClick)
-
-window.addEventListener('scroll', handleScroll)
-
-const observe = new IntersectionObserver(entries => {
+const observerFunction = (entries) => {
     entries.forEach((entry) => {
         if(!entry.isIntersecting) return;
         const currentPage = entry.target.getAttribute('i');
-        console.log(currentPage);
 
-        [...navLinks].forEach( (navLink, i) => {
+        [...headerLg.getElementsByClassName('nav-link')].forEach( (navLink, i) => {
             navLink.classList.remove('active-nav')
             if(currentPage == i + 1) {
-                console.log(i, currentPage)
+                navLink.classList.add('active-nav')
+            }
+        });
+
+        [...headerSm.getElementsByClassName('nav-link')].forEach( (navLink, i) => {
+            navLink.classList.remove('active-nav')
+            if(currentPage == i + 1) {
                 navLink.classList.add('active-nav')
             }
         });
@@ -39,12 +49,25 @@ const observe = new IntersectionObserver(entries => {
         [...navigationLinks].forEach( ((navigationLink, i) => {
             navigationLink.classList.remove('active-navigation')
             if(currentPage == i) {
-                console.log(i, currentPage)
                 navigationLink.classList.add('active-navigation')
             }
         }))
     })
+}
+
+[...headerSm.getElementsByClassName('nav-link')].forEach( navLink => {
+    navLink.addEventListener('click', () => headerSm.classList.remove('show-menu'))
 })
+
+menuBtn.addEventListener('click', handleClick)
+
+window.addEventListener('scroll', handleScroll)
+
+let options = {
+    rootMargin: '-100px',
+}
+
+const observe = new IntersectionObserver(observerFunction, options)
 
 const sections = document.getElementsByClassName('section');
 

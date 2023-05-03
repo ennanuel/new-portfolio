@@ -296,6 +296,18 @@ section:hover .section-title .border:after {
 
 .navigation {
     padding-left: 3px;
+    top: 50%; 
+    right: 10px; 
+    width: 20px; 
+    padding: 7px; 
+    transform: translateY(-50%); 
+    gap: 10px; 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hide-navigate {
+    transform: translateX(150px, -50%);
+    opacity: 0;
 }
 
 .navigation-link {
@@ -345,5 +357,5 @@ section:hover .section-title .border:after {
 }
 
 .active-navigation .nav-title span {
-    animation: move-front-back 1.5s ease-in-out;
+    animation: move-front-back 1.3s ease-in-out;
 }
