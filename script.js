@@ -13,9 +13,9 @@ const handleScroll = () => {
     } else {
         [...headers].forEach( header => header.classList.remove('scrolled') );
     }
-    
-    if(window.scrollY > scrollY || window.scrollY === 0) {
-        navigation.classList.add('show-navigate')
+
+    if(window.scrollY < scrollY && window.scrollY !== 0) {
+        navigation.classList.add('hide-navigate')
     } else {
         navigation.classList.remove('hide-navigate')
     }

@@ -10,7 +10,6 @@
 
 #header-lg nav {
     padding: 0 5%;
-    background-color: var(--);
     height: 60px;
     overflow: hidden;
     background: var(--gray);
@@ -281,21 +280,25 @@
 
 .intro .btn {
     text-transform: lowercase;
-    font-size: 1em;
+    font-size: 1.1em;
+}
+
+.intro .btn span {
+    padding: 10px 30px;
 }
 
 .intro .btn.contact-link {
     --bg: var(--purple);
-    --txt: var(--gray);
-    --border: var(--gray);
-    --shadow: var(--gray);
+    --txt: var(--black);
+    --border: var(--black);
+    --shadow: var(--black);
 }
 
 .intro .btn.work-link {
     --bg: var(--yellow);
-    --txt: var(--gray);
-    --border: var(--gray);
-    --shadow: var(--gray);
+    --txt: var(--black);
+    --border: var(--black);
+    --shadow: var(--black);
 }
 
 /* About section design */
@@ -319,6 +322,7 @@
 }
 
 .about-image {
+    max-width: 300px;
     width: 30%;
 }
 
@@ -331,7 +335,6 @@
     width: 100%;
     background: var(--solid-light-purple);
     border: 10px solid var(--dark-purple);
-    border-radius: 10px;
 }
 
 .about-image:before {
@@ -343,7 +346,6 @@
     height: 100%;
     background: var(--light-yellow);
     border: 10px solid var(--yellow);
-    border-radius: 10px;
 }
 
 .bio .port {

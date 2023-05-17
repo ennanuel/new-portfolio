@@ -54,8 +54,8 @@
     <!-- Intro section -->
     <section class="intro section relative flex flex-row ai-center jc-start">
         <!-- Box containing the image -->
-        <div class="image image-bg fixed z-0">
-        </div>
+        <!-- <div class="image image-bg fixed z-0">
+        </div> -->
 
         <!-- Box containing my name and introductory text -->
         <div class="intro-text w-full relative z-1">
@@ -68,18 +68,20 @@
             </div>
         </div>
 
+        <img src="./assets/bg.png" alt="background" style="bottom: -5vh; left: 0;" class="absolute w-full">
+
         <!-- Section social links -->
-        <article style="bottom: 0; left: 0; margin-bottom: 30px; color: var(--light-white); gap: 12px" class="intro-socials absolute flex ai-center">
-            <div style="height: 2px; width: 80px; background-color: var(--light-white);"></div>
-            <ul style="gap: 12px; font-size: 1.5em; opacity: 0.5" class="flex ai-center">
+        <article style="--bg: var(--light-white); bottom: 0; left: 0; margin-bottom: 30px; gap: 12px" class="intro-socials absolute flex ai-center">
+            <div style="height: 4px; width: 6vw; background-color: var(--bg);"></div>
+            <ul style="gap: 12px; font-size: 1.5em;color: var(--bg); " class="flex ai-center">
                 <li><i class="fa fa-github"></i></li>
-                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--light-white);"></div>
+                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--bg);"></div>
                 <li><i class="fa fa-twitter"></i></li>
-                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--light-white);"></div>
+                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--bg);"></div>
                 <li><i class="fa fa-linkedin"></i></li>
-                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--light-white);"></div>
+                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--bg);"></div>
                 <li><i class="fa fa-codepen"></i></li>
-                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--light-white);"></div>
+                <div style="width: 4px; aspect-ratio: 1; border-radius: 50%; background-color: var(--bg);"></div>
                 <li><i class="fa fa-medium"></i></li>
             </ul>
         </article>
@@ -100,7 +102,7 @@
                 <span class="absolute border"></span>
             </h2>
         </div>
-        <article class="bio flex full-w jc-center">
+        <article class="bio flex ai-center jc-center w-full jc-center">
             <div>
                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, velit quibusdam. Earum, blanditiis, hic tempore nam voluptas repellat debitis culpa sint vel quo delectus architecto repudiandae ratione neque dolor eius?

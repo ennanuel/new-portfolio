@@ -6,17 +6,17 @@
 }
 
 :root {
-    --white: #fdebf4;
-    --light-white: #9b9397;
-    --light-black: #0c0c0c59;
+    --white: rgb(253, 235, 244);
+    --light-white: rgb(155, 146, 150);
+    --light-black: rgba(13, 13, 13, 0.349);
     --light-purple: #872ac969;
-    --light-yellow: #e8c15a69;
-    --solid-light-purple: #be95db;
-    --purple: #872ac9;
+    --light-yellow: rgba(232, 194, 89, 0.412);
+    --solid-light-purple: rgb(190, 149, 219);
+    --purple: rgb(135, 42, 201);
     --dark-purple: #41195d;
-    --gray: #19171b;
-    --black: #0c0c0c;
-    --yellow: #e8c15a;
+    --gray: rgb(25, 23, 27);
+    --black: rgb(12, 12, 12);
+    --yellow: rgb(232, 193, 90);
 }
 
 html, body {
@@ -295,7 +295,6 @@ section:hover .section-title .border:after {
   }
 
 .navigation {
-    padding-left: 3px;
     top: 50%; 
     right: 10px; 
     width: 20px; 
@@ -306,8 +305,13 @@ section:hover .section-title .border:after {
 }
 
 .hide-navigate {
-    transform: translateX(150px, -50%);
+    transform: translate(150px, -50%);
     opacity: 0;
+}
+
+.hide-navigate:hover {
+    opacity: 1;
+    transform: translateY(-50%); 
 }
 
 .navigation-link {
@@ -330,7 +334,7 @@ section:hover .section-title .border:after {
 
 .nav-title {
     top: 0;
-    right: calc(100% + 3px);
+    right: calc(100% - 1px);
     overflow: hidden;
     width: fit-content;
     pointer-events: none;
@@ -340,11 +344,12 @@ section:hover .section-title .border:after {
     height: 100%;
     background-color: var(--bg);
     border: 1px solid var(--border);
+    border-right: none;
     padding: 10px;
     font-size: 0.8em;
-    font-weight: bold;
+    font-weight: normal;
     color: var(--black);
-    transform: translateX(calc(100% + 5px));
+    transform: translateX(calc(100% + 2px));
     transition: transform 0.3s ease;
 }
 
@@ -354,6 +359,7 @@ section:hover .section-title .border:after {
 
 .navigation-link:hover .nav-title span {
     transform: translateX(0);
+    animation-duration: 0s;
 }
 
 .active-navigation .nav-title span {
