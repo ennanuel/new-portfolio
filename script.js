@@ -4,6 +4,7 @@ const headerLg = document.getElementById('header-lg')
 const navigation = document.querySelector('.navigation')
 const menuBtn = document.querySelector('.menu-btn')
 const navigationLinks = document.getElementsByClassName('navigation-link')
+const intro = document.getElementById('intro')
 
 let scrollY = 0;
 
@@ -18,6 +19,15 @@ const handleScroll = () => {
         navigation.classList.add('hide-navigate')
     } else {
         navigation.classList.remove('hide-navigate')
+    }
+
+
+    if(window.scrollY <= 50) {
+        headerLg.classList.add('no-bg')
+        headerSm.classList.add('no-bg')
+    } else {
+        headerLg.classList.remove('no-bg')
+        headerSm.classList.remove('no-bg')
     }
 
     scrollY = window.scrollY

@@ -66,4 +66,8 @@
         font-size: 0.9em;
         margin-top: 20px;
     }
+
+    .project-container {
+        padding: 0;
+    }
 }

@@ -16,6 +16,13 @@
         pointer-events: all;
     }
 
+    .curly-bg {
+        bottom: 0;
+        top: auto;
+        height: 70vh;
+        object-fit: cover;
+    }
+
     .image-bg {
         height: 60vh;
         opacity: 0.4;
@@ -33,6 +40,12 @@
 
     .intro-text p {
         font-size: 1.5em;
+        margin-top: -10px !important;
+        margin-bottom: -10px !important;
+    }
+
+    .intro-text p:nth-child(3) {
+        font-size: 1.7em;
     }
 
     .bio {
@@ -101,7 +114,12 @@
         height: 100%;
     }
 
-    .project-image:before, .project-image:after {
+    .project:hover .img-shadow,
+    .project:hover .img-container {
+        transform: translate(0, 0);
+    }
+
+    .img-shadow, .img-container {
         border-width: 5px;
     }
 

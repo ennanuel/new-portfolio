@@ -17,7 +17,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header style="top: 0; left: 0; transition: transform 0.3s ease;" id="header-lg" class="fixed z-10 w-full">
+    <header style="top: 0; left: 0; transition: transform 0.3s ease;" id="header-lg" class="no-bg fixed z-10 w-full">
         <nav class="flex flex-row jc-between ai-center w-full">
             <h2 style="color: var(--white)">LOGO</h2>
             <ul style="gap: 0;text-transform: lowercase; font-size: 0.9em" class="flex flex-row ai-center relative h-full">
@@ -31,7 +31,7 @@
     </header>
 
     <!-- Header -->
-    <header style="top: 0; left: 0; transition: transform 0.3s ease;" id="header-sm" class="fixed z-10 w-full">
+    <header style="top: 0; left: 0; transition: transform 0.3s ease;" id="header-sm" class="no-bg fixed z-10 w-full">
         <nav class="">
             <div class="header-top flex flex-row ai-center jc-between">
                 <h2 class="logo relative z-1" style="color: var(--white)">LOGO</h2>
@@ -52,23 +52,19 @@
     </header>
 
     <!-- Intro section -->
-    <section class="intro section relative flex flex-row ai-center jc-start">
-        <!-- Box containing the image -->
-        <!-- <div class="image image-bg fixed z-0">
-        </div> -->
+    <section id="intro" class="intro section relative flex flex-row ai-center jc-start">
+        <img src="./assets/curly-bg.svg" alt="curly-bg" class="curly-bg absolute w-full">
 
         <!-- Box containing my name and introductory text -->
         <div class="intro-text w-full relative z-1">
-            <p style="color: var(--light-white);">Hi!</p>
-            <h1><span>I am</span> <span>Emmanuel</span>,</h1>
-            <p style="color: var(--light-white);"class="title">A Full-Stack Developer</p>
+            <p style="color: var(--light-white);">Ezema,</p>
+            <h1><span>Emmanuel.</span></h1>
+            <p style="color: var(--light-white);"class="title">Full-Stack Developer</p>
             <div style="gap: 15px; margin-top: 20px;" class="w-full flex ai-center jc-start">
                 <button class="btn work-link relative"><span class="relative flex ai-center jc-center">My Works</span></button>
                 <button class="btn contact-link relative"><span class="relative flex ai-center jc-center">Contact Me</span></button>
             </div>
         </div>
-
-        <img src="./assets/bg.png" alt="background" style="bottom: -5vh; left: 0;" class="absolute w-full">
 
         <!-- Section social links -->
         <article style="--bg: var(--light-white); bottom: 0; left: 0; margin-bottom: 30px; gap: 12px" class="intro-socials absolute flex ai-center">
@@ -93,7 +89,8 @@
     </section>
 
     <!-- About section -->
-    <section class="about section relative z-1" id="about">
+    <section class="about section relative z-1" id="about" style="background-image: url(./assets/earphones.svg); background-size: 100%; background-repeat: none;">
+        <img src="./assets/curly-bg1.svg" style="top: 0; left: 0;" alt="curly-bg" class="absolute w-full h-full">
         <div class="section-title relative flex ai-center jc-start">
             <h2 class="relative flex ai-end">
                 <span class="absolute border"></span>
@@ -102,11 +99,10 @@
                 <span class="absolute border"></span>
             </h2>
         </div>
-        <article class="bio flex ai-center jc-center w-full jc-center">
+        <article class="bio relative flex ai-center jc-center w-full jc-center">
             <div>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, velit quibusdam. Earum, blanditiis, hic tempore nam voluptas repellat debitis culpa sint vel quo delectus architecto repudiandae ratione neque dolor eius?
-                Fugiat labore beatae blanditiis maiores dolores, possimus quae voluptates sit ad, facere inventore, exercitationem neque iusto eaque omnis aspernatur nulla! Porro illo voluptatum architecto quaerat tempora! At ipsam optio nobis.
+                    Lpossimus quae voluptates sit ad, facere inventore, exercitationem neque iusto eaque omnis aspernatur nulla! Porro illo voluptatum architecto quaerat tempora! At ipsam optio nobis.
                 Inventore neque error illo aperiam, aliquid soluta velit pariatur repellendus. Harum veniam eum itaque perferendis reiciendis nisi inventore. Fugiat, repudiandae! Officia, rerum praesentium sit possimus quod assumenda unde quas nam.
                 </p>
                 <div style="margin-top: 15px; gap: 15px;" class="flex">
@@ -120,6 +116,7 @@
 
     <!-- Skills section -->
     <section class="skills section relative z-1" id="skills">
+        <img src="./assets/vector-bg.svg" style="top: 0; left: 0;" alt="vector" class="absolute w-full h-full">
         <div class="section-title relative flex ai-center jc-end">
             <h2 class="relative flex ai-end">
                 <span class="absolute border"></span>
@@ -131,11 +128,11 @@
         <article>
             <p>The stack I use for most of my projects is <a href="#">MERN</a> Stack, other technologies I've used are listed below.</p>
             <ul class="skills-list">
-                <li class="flex flex-col ai-center jc-center">
+                <li class="relative flex flex-col ai-center jc-center">
                     <img class="skills-img" src="./assets/react.png" alt="image">
                     <p>Frontend</p>
                     <h3>ReactJS</h3>
-                </li class="flex flex-col ai-center jc-center">
+                </li>
                 <li class="flex flex-col ai-center jc-center">
                     <img class="skills-img" src="./assets/nodejs.png" alt="image">
                     <p>Backend</p>
@@ -178,8 +175,19 @@
                 </li>
                 <li class="flex flex-col ai-center jc-center">
                     <img class="skills-img" src="./assets/git.png" alt="image">
-                    <p>CI/CD</p>
+                    <p>Version Control</p>
                     <h3>Git</h3>
+                    <div class="skill-info h-full absolute flex flex-col">
+                        <h2>React JS</h2>                        
+                        <span style="font-size: 0.8em">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis vero ratione voluptatum exercitationem voluptates aperiam quia optio.</span>
+                        <h3 style="font-size: 1.1em; font-weight: bold;">Projects</h3>
+                        <div class="projects-list flex flex-row" style="gap: 10px;flex-wrap: wrap;">
+                            <a href="#" class="relative">
+                                <span class="link-shadow absolute w-full h-full flex"></span>
+                                <span class="link-text relative h-full flex ai-center jc-center">Project 1</span>
+                            </a>
+                        </ul>
+                    </div>
                 </li>
             </ul>
 
@@ -190,6 +198,12 @@
     <!-- Projects section -->
 
     <section class="projects section relative z-1" id="projects">
+        <div class="absolute w-full flex flex-col" style="top: 0; left: 0">
+            <img src="./assets/vector-bg1.svg" class="w-full h-full" alt="">
+            <img src="./assets/vector-bg2.svg" class="w-full h-full" alt="">
+            <img src="./assets/vector-bg1.svg" class="w-full h-full" alt="">
+            <img src="./assets/vector-bg2.svg" class="w-full h-full" alt="">
+        </div> 
         <div class="section-title relative flex ai-center jc-start">
             <h2 class="relative flex ai-end">
                 <span class="absolute border"></span>
@@ -203,7 +217,12 @@
             <div class="projects-container flex flex-col">
                 <!-- Projects -->
                 <div class="project relative flex ai-center jc-between">
-                    <div class="relative project-image"></div>
+                    <div class="relative project-image">
+                        <div class="img-shadow"></div>
+                        <div class="img-container absolute w-full h-full">
+                            <img src="./assets/ridm favicon.png" alt="image" class="h-full w-full">
+                        </div>
+                    </div>
                     <div class="relative project-info z-1">
                         <div class="project-title absolute z-1"><h2 class="flex ai-center"><span>1.</span><span>Simple Project</span></h2></div>
                         <div class="desc flex flex-col">
@@ -245,11 +264,21 @@
                             <li>HTML/CSS</li>
                         </ul>
                     </div>
-                    <div class="relative project-image"></div>
+                    <div class="relative project-image">
+                        <div class="img-shadow"></div>
+                        <div class="img-container absolute w-full h-full">
+                            <img src="./assets/ridm favicon.png" alt="image" class="h-full w-full">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="project relative flex ai-center jc-between">
-                    <div class="relative project-image"></div>
+                    <div class="relative project-image">
+                        <div class="img-shadow"></div>
+                        <div class="img-container absolute w-full h-full">
+                            <img src="./assets/ridm favicon.png" alt="image" class="h-full w-full">
+                        </div>
+                    </div>
                     <div class="relative project-info z-1">
                         <div class="project-title absolute z-1"><h2 class="flex ai-center"><span>3.</span><span>Simple Project</span></h2></div>
                         <div class="desc flex flex-col">
@@ -328,7 +357,8 @@
     <!-- Contact Section -->
     
     <section class="contact section relative z-1 flex ai-center jc-center" id="contact">
-        <article class="w-full flex-wrap flex ai-center jc-center h-full">
+        <img src="./assets/vector-bg3.svg" alt="vector-bg3" style="top: 0; left: 0;" class="absolute w-full h-full">
+        <article class="w-full flex ai-center jc-center h-full">
             <div class="top">
                 <div class="section-title relative flex ai-center jc-start">
                     <h2 class="relative flex ai-end">
@@ -367,6 +397,7 @@
     <script src="./script.js"></script>
 </body>
 <footer class="footer relative z-1">
-    Copyright 2023, Emmanuel Ezema
+    <h3 style="-webkit-text-stroke: 1px var(--white); color: transparent;font-size: 3em;">Emmanuel.</h3>
+    <p style="color: var(--light-white)">Copyright 2023</p>
 </footer>
 </html>

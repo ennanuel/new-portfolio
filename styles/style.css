@@ -1,11 +1,22 @@
 /* Header Design */
 
+.curly-bg {
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
 .scrolled#header-lg {
     transform: translateY(-100%);
 }
 
+
 #header-lg:hover {
     transform: translateY(0);
+}
+
+nav {
+    transition: background-color 0.3s ease;
 }
 
 #header-lg nav {
@@ -13,6 +24,11 @@
     height: 60px;
     overflow: hidden;
     background: var(--gray);
+}
+
+.no-bg#header-lg nav,
+.no-bg#header-sm .header-top{
+    background: transparent !important;
 }
 
 #header-lg .nav-link {
@@ -58,6 +74,10 @@
     --bg: var(--gray);
     --shadow: var(--yellow);
     --border: var(--yellow);
+}
+
+#header-lg.no-bg .btn {
+    --bg: var(--dark-purple)
 }
 
 #header-lg .btn span {
@@ -225,25 +245,38 @@
 /* Intro section design */
 
 .intro {
-    background-color: var(--gray);
+    background-color: var(--dark-purple);
     overflow: hidden;
     padding: 10%;
+    transition: clip-path 0.05s ease;
 }
 
 .intro-text h1 {
     text-transform: lowercase;
     color: var(--white);
     font-weight: normal;
-    font-size: 5em;
+    font-size: 6em;
 }
 
-.intro-text h1 span:last-child {
+.intro-text h1 span {
     text-transform: capitalize;
     font-weight: bold;
+    -webkit-text-stroke: 1px var(--white);
+    color: var(--dark-purple);
 }
 
 .intro-text p {
-    font-size: 1.7em;
+    font-size: 2em;
+    color: var(--white)
+}
+
+.intro-text p:first-child {
+    margin-bottom: -20px;
+    font-size: 1.5em;
+}
+
+.intro-text p:nth-child(3) {
+    margin-top: -20px;
 }
 
 .image-bg {
@@ -456,12 +489,17 @@
 .skills-list li p {
     font-size: 0.7em;
     font-weight: bold;
-    color: var(--light-yellow);
+    color: var(--yellow);
     align-self: flex-start;
     text-transform: lowercase;
     margin-top: 10%;
     position: relative;
+    opacity: 0.5;
     z-index: 1;
+}
+
+.skills-list li:hover p {
+    opacity: 1;
 }
 
 .skills-list li:hover {
@@ -481,6 +519,53 @@
     border-width: 5px;
 }
 
+.skill-info {
+    top: 0;
+    right: 110%;
+    padding: 15px;
+    border-radius: 6px;
+    border: 2px solid var(--white);
+    background-color: var(--gray);
+    width: 500px;
+    gap: 10px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.skills-list li:hover .skill-info {
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 0.3s ease;
+    transition-delay: 0.1s;
+}
+
+.skill-info h2 {
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.skill-info a {
+    height: 30px;
+}
+
+.skill-info a:hover .link-text {
+    transform: translate(6px, 6px);
+}
+
+.link-shadow {
+    top: 6px;
+    left: 6px;
+    background: repeating-linear-gradient(45deg, transparent 0, transparent 8px, var(--yellow) 8px, var(--yellow) 11px);
+    border: 2px solid var(--yellow);
+}
+
+.link-text {
+    padding: 2px 5px;
+    background: var(--gray);
+    border: 2px solid var(--yellow);
+    transition: transform 0.2s ease;
+}
+
 /* projects styling */
 
 .projects {
@@ -494,13 +579,14 @@
 .projects-text {
     font-size: 2em;
     text-align: center;
-    color: var(--purple);
+    color: var(--gray);
     margin-top: 50px;
 }
 
 .projects-container {
     margin: 50px 0;
-    gap: 80px;
+    padding: 5% 7%;
+    gap: 200px;
 }
 
 .project-image {
@@ -514,6 +600,7 @@
     --before-border: var(--yellow);
     --after-border: var(--dark-purple);
     --desc-bg: var(--light-purple);
+    --second-color: var(--light-yellow)
 }
 
 .project.opp {
@@ -522,6 +609,7 @@
     --before-border: var(--dark-purple);
     --after-border: var(--yellow);
     --desc-bg: var(--light-yellow);
+    --second-color: var(--light-purple)
 }
 
 .project-info {
@@ -530,13 +618,19 @@
 }
 
 .desc {
-    background-color: var(--desc-bg);
+    background: var(--desc-bg);
+    background-size: 100% 400%;
     backdrop-filter: blur(10px);
     padding: 40px 60px;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.project-image:before {
+.project:hover {
+    --desc-bg: var(--second-color)
+}
+
+.img-shadow {
     content: "";
     position: absolute;
     top: -20px;
@@ -547,15 +641,18 @@
     border: 10px solid var(--before-border);
 }
 
-.project-image:after {
-    content: "";
-    position: absolute;
+.img-container {
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     background-color: var(--white);
     border: 10px solid var(--after-border);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.project:hover .img-container,
+.project:hover .project-title h2 {
+    transform: translate(-5px, -5px)
 }
 
 .projects .btn.demo-link {
@@ -590,6 +687,7 @@
     border: 5px solid var(--black);
     transform: translate(-10px, -10px);
     background-color: var(--black);
+    transition: transform 0.3s ease;
 }
 
 .project-title span:first-child {
@@ -771,8 +869,7 @@
 }
 
 .form {
-    max-width: 600px;
-    min-width: 50%;
+    max-width: 500px;
     top: 20px;
     transition: transform 0.3s ease;
     flex: 1;

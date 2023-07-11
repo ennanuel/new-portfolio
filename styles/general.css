@@ -5,15 +5,19 @@
     padding: 0;
 }
 
+img {
+    object-fit: cover;
+}
+
 :root {
     --white: rgb(253, 235, 244);
     --light-white: rgb(155, 146, 150);
     --light-black: rgba(13, 13, 13, 0.349);
-    --light-purple: #872ac969;
+    --light-purple: rgba(135, 42, 201, 0.412);
     --light-yellow: rgba(232, 194, 89, 0.412);
     --solid-light-purple: rgb(190, 149, 219);
     --purple: rgb(135, 42, 201);
-    --dark-purple: #41195d;
+    --dark-purple: rgb(65, 25, 93);
     --gray: rgb(25, 23, 27);
     --black: rgb(12, 12, 12);
     --yellow: rgb(232, 193, 90);
@@ -22,7 +26,10 @@
 html, body {
     max-width: 100vw;
     font-family: 'Poppins', sans-serif;
-    /* font-family: 'Urbanist', sans-serif; */
+}
+
+.urbanist {
+    font-family: 'Urbanist', sans-serif;
 }
 
 html {
@@ -31,8 +38,13 @@ html {
     scroll-behavior: smooth;
 }
 
-section {
+.intro,
+.connect {
     min-height: 100vh;
+}
+
+section {
+    min-height: 120vh;
 }
 
 .section {
@@ -364,4 +376,8 @@ section:hover .section-title .border:after {
 
 .active-navigation .nav-title span {
     animation: move-front-back 1.3s ease-in-out;
+}
+
+.animate-bgposition {
+    animation: bg-position 5s alternate infinite linear;
 }
